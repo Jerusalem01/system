@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head> 
+<meta charset="utf-8">
+<title>工大商城</title>
+<link rel="stylesheet" type="text/css" href="/index/css/index.css">
+ <script src="/index/js/jquery-1.11.3.min.js" ></script>
+<script src="/index/js/index.js" ></script>
+<!-- <script type="text/javascript" src="js/jquery1.42.min.js"></script> -->
+<script type="text/javascript" src="/index/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/index/js/jquery.SuperSlide.2.1.1.source.js"></script>
+</head>
+<body>
+<!--侧边-->
+<div class="jdm-toolbar-wrap J-wrap">                
+	<div class="jdm-toolbar J-toolbar">                    
+		<div class="jdm-toolbar-panels J-panel"></div>                                       
+		<div class="jdm-toolbar-tabs J-tab">
+			<div data-type="bar" class="J-trigger jdm-toolbar-tab jdm-tbar-tab-ger">                                
+				<i class="tab-ico"></i>
+				<em class="tab-text">购物车</em>                                                  
+			</div>                           
+			<div data-type="bar" class="J-trigger jdm-toolbar-tab jdm-tbar-tab-cart">                                
+				<i class="tab-ico"></i>
+				<em class="tab-text">购物车</em>                                                  
+			</div>
+		</div>
+	</div>                    
+	<div class="jdm-toolbar-footer">                        
+		<div data-type="link" id="#top" class="J-trigger jdm-toolbar-tab jdm-tbar-tab-top">                                
+			<a href="#" clstag="h|keycount|cebianlan_h|top">                                
+				<i class="tab-ico"></i>
+				<em class="tab-text">顶部</em>                                
+			</a>                         
+		</div>             
+	</div>                    
+	<div class="jdm-toolbar-mini"></div>              
+	<div id="J-toolbar-load-hook" clstag="h|keycount|cebianlan_h|load"></div>            
+</div> 
+<!--头部-->
+<div id="header">
+	<div class="header-box">
+		<ul class="header-right">
+			<li class="denglu"><a class="red" href="#">登录</a>  <a href="#">注册</a></li>
+		</ul>
+	</div>
+</div>
+
+<!--搜索栏-->
+<div class="toub_beij">
+	<div class="logo"><a href="./"></a></div>
+	<div class="search">
+		<input type="text" value="好吃的零食" class="text" id="textt">
+		<button class="button">搜索</button>
+	</div>
+	<div class="right">
+		<i class="gw-left"></i>
+		<i class="gw-right"></i>
+		<div class="sc">
+			<i class="gw-count">0</i>
+			<i class="sd"></i>
+		</div>
+		<a href="#">我的购物车</a>
+		<div class="dorpdown-layer">
+			<ul>
+				<li class="meiyou">
+					<img src="./images/settleup-nogoods.png">
+					<span>购物车中还没有商品，赶紧选购吧！</span> 
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="hotwords">
+		<a class="biaoti">热门搜索：</a>
+		<a href="#">四件套</a>
+		<a href="#">潮流T恤</a>
+		<a href="#">乐1</a>
+		<a href="#">威士忌</a>
+	</div>
+</div>          
+
+<!-- 上方导航栏 -->
+<div id="navv">	
+	<div class="focus">
+		<div class="focus-a">
+			<div class="fouc-font"><a href="">商城首页</a> </div>
+		</div>
+		<div class="focus-b">
+			<ul>
+				<li><a href="#">美食之家</a></li>
+				<li><a href="#">饮料天地</a></li>
+				<li><a href="#">每日必用</a></li>
+				<li><a href="#">美美出门 </a></li>
+			</ul>
+		</div>
+		<!--轮播图-->
+		<div id="lunbo">
+			<ul id="one">
+				<li><a href=""><img src="./index/images/banner1.jpg"></a></li>
+				<li><a href=""><img src="./index/images/banner.jpg"></a></li>
+				<li><a href=""><img src="./index/images/banner1.jpg"></a></li>
+			</ul>
+			<ul id="two">
+				<li class="on">1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+			<!--轮播图左右箭头-->
+			<div class="slider-page">
+				<a href="javascript:void(0)" id="left"><</a>
+				<a href="javascript:void(0)" id="right">></a>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="lunbo2">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</div>
+
+<!-- 主体内容 -->
+<!--美食之家-->
+<div class="chengc_jvz">
+	<div class="slideTxtBox">
+		<div class="hd">
+			<h1>
+				<p>美食之家</p>
+				<p class="yingw_">eat foot</p>
+			</h1>
+		</div>
+		<div class="bd">
+			<ul>
+				<div class="xia_buf">
+					<div class="you_shangp_lieb">
+						<a href="#"><img  class="you_tup_k" src="./index/images/yic_004.jpg"></a>
+						<a href="#" class="_you_neir_biaot"></a>
+						<span>价格</span>
+					</div>
+				</div>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!--饮料天地-->
+<div class="chengc_jvz">
+	<div class="slideTxtBox">
+		<div class="hd">
+			<h1>
+				<p>饮料天地</p>
+				<p class="yingw_">drinks</p>
+			</h1>
+		</div>
+		<div class="bd">
+			<ul>
+				<div class="xia_buf">
+					<div class="you_shangp_lieb">
+						<a href="#"><img  class="you_tup_k" src="./index/images/yic_004.jpg"></a>
+						<a href="#" class="_you_neir_biaot"></a>
+						<span>价格</span>
+					</div>
+				</div>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!--每日必用-->
+<div class="chengc_jvz">
+	<div class="slideTxtBox">
+		<div class="hd">
+			<h1>
+				<p>每日必用</p>
+				<p class="yingw_">necessities</p>
+			</h1>
+		</div>
+		<div class="bd">
+			<ul>
+				<div class="xia_buf">
+					<div class="you_shangp_lieb">
+						<a href="#"><img  class="you_tup_k" src="./index/images/yic_004.jpg"></a>
+						<a href="#" class="_you_neir_biaot"></a>
+						<span>价格</span>
+					</div>
+				</div>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!--美美出门-->
+<div class="chengc_jvz">
+	<div class="slideTxtBox">
+		<div class="hd">
+			<h1>
+				<p>美美出门</p>
+				<p class="yingw_">cosmetics</p>
+			</h1>
+		</div>
+		<div class="bd">
+			<ul>
+				<div class="xia_buf">
+					<div class="you_shangp_lieb" th:each="{cosmetics : ${cosmeticsPage.content}">
+						<a href="#"><img  class="you_tup_k" th:src="@{${cosmetics.picture}}" src="./index/images/yic_004.jpg"></a>
+						<a href="#" th:text="${cosmetics.username}" class="_you_neir_biaot"></a>
+						<span th:text="${cosmetics.price}">价格</span>
+					</div>
+				</div>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">jQuery(".slideTxtBox").slide();</script>
+<script type="text/javascript">jQuery(".slideTxtBox2").slide();</script>
+<script type="text/javascript">jQuery(".slideTxtBox3").slide();</script>
+<script type="text/javascript">jQuery(".slideTxtBox4").slide();</script>
+<script type="text/javascript">
+		jQuery(".picScroll_left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:2 ,trigger:"click"});
+		</script>
+
+<!--底部-->
+<div class="dib_beij">
+	<div class="dib_jvz_beij">
+		<div class="shangp_baoz">
+			<p>本地购物&nbsp;&nbsp;看得见的商品</p>
+			<p class="beng1">正品行货&nbsp;&nbsp;购物无忧</p>
+			<p class="beng2">低价实惠&nbsp;&nbsp;帮你省钱</p>
+			<p class="beng3">本地直发&nbsp;&nbsp;专业配送</p>
+		</div>
+		<div class="zhongj_youx">
+			<div class="lieb_daoh">
+				<h4>物流配送</h4>
+				<ul>
+					<li><a href="#">配送查询</a></li>
+					<li><a href="#">配送服务</a></li>
+					<li><a href="#">配送费用</a></li>
+					<li><a href="#">配送时效</a></li>
+				</ul>
+			</div>
+			<div class="lieb_daoh">
+				<h4>支付与账户</h4>
+				<ul>
+					<li><a href="#">货到付款</a></li>
+					<li><a href="#">在线支付</a></li>
+					<li><a href="#">门店支付</a></li> 
+					<li><a href="#">账户安全</a></li>
+				</ul>
+			</div>
+			<div class="lieb_daoh">
+				<h4>购物帮助</h4>
+				<ul>
+					<li><a href="#">购物保障</a></li>
+					<li><a href="#">购物流程</a></li>
+					<li><a href="#">焦点问题</a></li>
+					<li><a href="#">联系我们</a></li> 
+				</ul>
+			</div>
+			<div class="lieb_daoh">
+				<h4>售后服务</h4>
+				<ul>
+					<li><a href="#">退换服务</a></li>
+					<li><a href="#">退款说明</a></li>
+					<li><a href="#">专业维修</a></li>
+					<li><a href="#">延保服务</a></li>
+				</ul>
+			</div>
+			<div class="lieb_daoh">
+				<div class="kef_dianh">
+					<p>客服电话</p><span>400-0250-250</span>
+				</div>
+				<div class="kef_dianh kef_dianh_youx">
+					<p>意见收集邮箱</p><p>topsale@vip.qq.com</p>
+				</div>
+			</div>
+			<div class="lieb_daoh lieb_daoh_you">
+				<div class="erw_ma_beij">
+					<div class="erw_m">
+						<h1><img src="./index/images/mb_wangid.png"></h1>
+						<span>扫码关注微信公众号</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
