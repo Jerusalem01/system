@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>商品管理</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/bower_components/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="/dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="/dist/css/skins/_all-skins.min.css">
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+    <!-- 顶部导航栏 -->
+    <header class="main-header">
+        <a href="#" class="logo">
+            <span class="logo-mini"><b>管理</b></span>
+            <span class="logo-lg"><b>商品管理系统</b></span>
+        </a>
+        <nav class="navbar navbar-static-top">
+            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="../../dist/img/zzz.jpg" class="user-image" alt="User Image">
+                            <span class="hidden-xs" th:text="${session.admin.username}">张依林</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="user-header">
+                                <img src="/dist/img/zzz.jpg" class="img-circle" alt="User Image">
+                                <p>
+                                    超级管理员
+                                    <small>长春工业大学</small>
+                                </p>
+                            </li>
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">个人资料</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" th:href="@{/admin/logout}" class="btn btn-default btn-flat">退出登录</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 左侧菜单栏 -->
+    <aside class="main-sidebar">
+        <section class="sidebar">
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <img src="/dist/img/zzz.jpg" class="img-circle" alt="User Image">
+                </div>
+                <div class="pull-left info">
+                    <p th:text="${session.admin.username}">张依林</p>
+                    <a><i class="fa fa-circle text-success"></i>在线</a>
+                </div>
+            </div>
+            <ul class="sidebar-menu" data-widget="tree">
+                <li class="header">控制栏</li>
+                <li ><a href="#" th:href="@{/admin/index}"><i class="fa fa-link"></i> <span>控制面板</span></a></li>
+                <li><a href="#" th:href="@{/admin/user}"><i class="fa fa-link"></i> <span>用户管理</span></a></li>
+                <li class="active">
+                    <a href="#"><i class="fa fa-link"></i> <span>商品管理</span>
+                        <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#" th:href="@{/admin/food}">食品</a></li>
+                        <li class="active"><a href="#" th:href="@{/admin/drinks}">饮料</a></li>
+                        <li><a href="#" th:href="@{/admin/necessities}">日用品</a></li>
+                        <li><a href="#" th:href="@{/admin/cosmetics}">化妆品</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </aside>
+
+
+    <!-- 主体内容 -->
+    <div class="content-wrapper">
+        <section class="content">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">饮料列表</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="callout callout-info" th:unless="${#strings.isEmpty(message)}">
+                                <h4>提示：</h4>
+                                <p th:text="${message}">提示信息</p>
+                            </div>
+                            <form th:action="@{/admin/drinks/search}" method="post">
+                                <table>
+                                    <div class="box-tools">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                            <tr>
+                                                <th><input type="text" name="name" class="form-control pull-right" placeholder="商品名称"></th>
+                                                <th><input type="text" name="manufacturer" class="form-control pull-right" placeholder="生产厂家"></th>
+                                                <th><input type="text" name="brand" class="form-control pull-right" placeholder="品牌"></th>
+                                                <th>
+                                                    <button type="submit" class="btn btn-default"><i class="fa fa-search"> 搜索</i></button>
+                                                </th>
+                                                <a href="#" th:href="@{/admin/drinks/input}" style="float:right" class="btn btn-right-block btn-success">新增商品</a>
+                                            </tr>
+                                        </div>
+                                    </div>
+                                </table>
+                            </form>
+                            <br>
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th>     </th>
+                                    <th>商品名称</th>
+                                    <th>价格</th>
+                                    <th>库存量</th>
+                                    <th>生产厂家</th>
+                                    <th>品牌</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="drinks,iterStat : ${page.content}">
+                                    <td th:text="${iterStat.count}">计数</td>
+                                    <td th:text="${drinks.name}">商品名称</td>
+                                    <td th:text="${drinks.price}">价格</td>
+                                    <td th:text="${drinks.inventory}">库存量</td>
+                                    <td th:text="${drinks.manufacturer}">生产厂家</td>
+                                    <td th:text="${drinks.brand}">品牌</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <a href="#" th:href="@{/admin/drinks/{id}/input(id=${drinks.id})}" class="btn btn-info">编辑</a>
+                                            <a href="#" th:href="@{/admin/drinks/{id}/delete(id=${drinks.id})}" class="btn btn-danger">删除</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <br>
+                            <div class="btn-group" style="float:right" th:if="${page.totalPages}>1">
+                                <a class="btn  btn-default" th:href="@{/admin/drinks(page=${page.number}-1)}" th:unless="${page.first}">上一页</a>
+                                <a class="btn  btn-default" th:href="@{/admin/drinks(page=${page.number}+1)}" th:unless="${page.last}">下一页</a>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </section>
+    </div>
+
+    <!-- 底部footer -->
+    <footer class="main-footer">
+        <strong>Copyright &copy; 2019 <a href="http://www.ccut.edu.cn/ccut.html">长春工业大学</a>.</strong>版权声明
+    </footer>
+</div>
+
+<script>
+
+</script>
+
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+<script src="../../dist/js/adminlte.min.js"></script>
+<script src="../../dist/js/demo.js"></script>
+</body>
+</html>
