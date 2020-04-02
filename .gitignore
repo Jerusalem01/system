@@ -11,7 +11,10 @@ target/
 
 ## IntelliJ IDEA ##
 .idea
+<<<<<<< HEAD
 .mvn
+=======
+>>>>>>> 63269096ffc4ca939985d4b59ed6d6ce9408627a
 *.iws
 *.iml
 *.ipr
