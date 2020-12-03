@@ -1,24 +1,42 @@
 # system
 
-#### 介绍
-商品管理系统
+#### 项目介绍
+Java课程设计 - 商品管理系统，适合新手的管理系统项目，易上手。
 
-#### 软件架构
-软件架构说明
+#### 技术选型
 
-#### 参与贡献
+##### 后端技术
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+| 技术              | 说明             |
+| ----------------- | ---------------- |
+| Spring Boot 2.2.2 | 容器+MVC框架     |
+| MyBatis           | ORM框架          |
+| MyBatis Plus      | MyBatis增强工具  |
+| MySql 5.7         | 数据库           |
+| Lombok            | 简化对象封装工具 |
 
+##### 前端技术
 
-#### 码云特技
+| 技术        | 说明     |
+| ----------- | -------- |
+| HTML CSS JS | 前端技术 |
+| JQuery      | JS插件库 |
+| Thymeleaf   | 模板引擎 |
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 效果演示
+
+- 登录页
+
+  ![](http://jerusalem01.gitee.io/images-bed/images/system/QQ图片20201202214126.png)
+
+- 首页
+
+  ![](http://jerusalem01.gitee.io/images-bed/images/system/QQ图片20201202214250.png)
+
+#### 友情链接
+
+- **[个人博客](http://www.nm83.com)**
+
+- **[码云](https://gitee.com/jerusalem01)**
+
+- **[GitHub](https://github.com/Jerusalem01)**
